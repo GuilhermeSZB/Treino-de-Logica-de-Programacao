@@ -8,4 +8,4 @@ for i in range(10):
     print(b)
     b = b - 1
 
-print ("Decolar!!!")
+print ("Decolar!")
