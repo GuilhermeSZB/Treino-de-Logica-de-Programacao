@@ -1,4 +1,4 @@
-print("Qual é a area de quantos?")
+print("Qual é a area")
 nums = []
 
 
