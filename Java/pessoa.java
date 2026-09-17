@@ -2,24 +2,24 @@ package Java;
 import java.util.Scanner;
 
 public class pessoa {
-    static Scanner sc = new Scanner(System.in);
-    static String nome =  null;
-    static int idade = 0;
-    static double altura = 0;
+     static Scanner sc = new Scanner(System.in);
+     String nome =  null;
+     int idade = 0;
+     double altura = 0;
 
-    public static void apresentar(String nome, int idade, double altura){
+    public void apresentar(String nome, int idade, double altura){
         System.out.println("Nome: " + nome);
         System.out.println("Idade: " + idade);
         System.out.println("Altura: " + altura);
     }
 
-    public static void aniversario(String nome, int idade){
+    public void aniversario(String nome, int idade){
         System.out.println(nome + " Fez aniversário!");
         int idniver = idade + 1;
         System.out.println("Agora tem " + idniver + " Anos.");
     }
 
-    public static void perguntas(){
+    public void perguntas(){
         System.out.print("Qual é seu nome: ");
         nome = sc.next();
 
@@ -30,20 +30,23 @@ public class pessoa {
         altura = sc.nextDouble();
     }
 
-    public static void user(){
+    public void user(){
         perguntas();
         apresentar(nome, idade, altura);
         System.out.println(" ");
         aniversario(nome, idade);
     }
-
+    
     public static void main(String[] args) {
-        System.out.println("A Primeira pessoa");
-        user();
+        pessoa pessoa1 = new pessoa();
+        pessoa pessoa2 = new pessoa();
 
-        System.out.println("A Segunda pessoa");
-        user();
+        pessoa1.user();
+        pessoa2.user();
 
+        System.out.println(pessoa1.altura);
+        System.out.println(pessoa2.altura);
+        
         sc.close();
     }
 
