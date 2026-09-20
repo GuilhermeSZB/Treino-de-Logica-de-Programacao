@@ -7,16 +7,16 @@ public class pessoa {
      int idade = 0;
      double altura = 0;
 
-    public void apresentar(String nome, int idade, double altura){
+    public void apresentar(){
         System.out.println("Nome: " + nome);
         System.out.println("Idade: " + idade);
         System.out.println("Altura: " + altura);
     }
 
-    public void aniversario(String nome, int idade){
+    public void aniversario(){
         System.out.println(nome + " Fez aniversário!");
-        int idniver = idade + 1;
-        System.out.println("Agora tem " + idniver + " Anos.");
+        idade = idade + 1;
+        System.out.println("Agora tem " + idade + " Anos.");
     }
 
     public void perguntas(){
@@ -32,9 +32,9 @@ public class pessoa {
 
     public void user(){
         perguntas();
-        apresentar(nome, idade, altura);
+        apresentar();
         System.out.println(" ");
-        aniversario(nome, idade);
+        aniversario();
     }
     
     public static void main(String[] args) {
@@ -44,8 +44,8 @@ public class pessoa {
         pessoa1.user();
         pessoa2.user();
 
-        System.out.println(pessoa1.altura);
-        System.out.println(pessoa2.altura);
+        System.out.println(pessoa1.idade);
+        System.out.println(pessoa2.idade);
         
         sc.close();
     }
