@@ -1,11 +1,11 @@
 package Java;
-import java.util.Scanner;
+
 
 public class pessoa {
-     static Scanner sc = new Scanner(System.in);
-     String nome =  null;
-     int idade = 0;
-     double altura = 0;
+     
+     String  nome;
+     int idade;
+     double altura;
 
     public void apresentar(){
         System.out.println("Nome: " + nome);
@@ -19,35 +19,24 @@ public class pessoa {
         System.out.println("Agora tem " + idade + " Anos.");
     }
 
-    public void perguntas(){
-        System.out.print("Qual é seu nome: ");
-        nome = sc.next();
+    public pessoa(String nome, int idade, double altura){
+        this.nome = nome;
+        this.idade = idade;
+        this.altura = altura;
 
-        System.out.print("Qual é sua idade: ");
-        idade = sc.nextInt();
-
-        System.out.print("Qual sua altura: ");
-        altura = sc.nextDouble();
     }
-
-    public void user(){
-        perguntas();
-        apresentar();
-        System.out.println(" ");
-        aniversario();
-    }
+ 
     
     public static void main(String[] args) {
-        pessoa pessoa1 = new pessoa();
-        pessoa pessoa2 = new pessoa();
+        pessoa pessoa1 = new pessoa("Guilherme", 17, 1.80);
+        pessoa pessoa2 = new pessoa("João", 28, 1.95);
 
-        pessoa1.user();
-        pessoa2.user();
+        pessoa1.apresentar();
+        pessoa2.apresentar();
 
-        System.out.println(pessoa1.idade);
-        System.out.println(pessoa2.idade);
+        pessoa1.aniversario();
+        pessoa2.aniversario();
         
-        sc.close();
     }
 
    
